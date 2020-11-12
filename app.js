@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
- req.query.nombre == 0 ? res.send (`<h1>Hola desconocido!</h1>`) 
+ !req.query.nombre ? res.send (`<h1>Hola desconocido!</h1>`) 
  : res.send (`<h1>Hola ${req.query.nombre}!</h1>`);
   
   }
